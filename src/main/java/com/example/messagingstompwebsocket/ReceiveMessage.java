@@ -2,20 +2,30 @@ package com.example.messagingstompwebsocket;
 
 public class ReceiveMessage {
 
-	private String name;
+	private String content;
+	private String fileName;
 
 	public ReceiveMessage() {
 	}
 
-	public ReceiveMessage(String name) {
-		this.name = name;
+	public ReceiveMessage(String content, String fileName) {
+		this.content = content;
+		this.fileName = fileName;
 	}
 
-	public String getName() {
-		return name;
+	public String getContent() {
+		return content;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public String getFileName() {
+		return this.fileName;
 	}
 }

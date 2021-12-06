@@ -14,6 +14,8 @@ import java.util.*;
 @Controller
 public class FileController {
 
+	public String fileName = "";
+
 	@MessageMapping("/save")
 	public void saveFile(FileCreator fileDetails) throws Exception {
 		try {			
@@ -44,9 +46,10 @@ public class FileController {
 
 	@MessageMapping("/text")
 	@SendTo("/topic/message")
-	public Message update(ReceiveMessage message) throws Exception {
+	public String[] update(ReceiveMessage message) throws Exception {
 		Thread.sleep(100);
-		return new Message(HtmlUtils.htmlEscape(message.getName()));
+		String[] updateReturn = {message.getContent(), message.getFileName()};
+		return updateReturn;
 	}
 
 }
