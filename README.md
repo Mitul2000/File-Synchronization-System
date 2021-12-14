@@ -1,4 +1,4 @@
-# File-Synchronization-System
+# Real-Time Collaboration System
 
 
 To run the code enter the following command in the command prompt: mvn spring-boot:run
